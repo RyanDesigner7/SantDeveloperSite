@@ -40,22 +40,17 @@ export default function Home() {
                     </h2>
 
                     <div className="mt-7 space-y-1">
-                        <a href="tel:+551199798454" className="block hover:underline">
-                            +55 (11) 99798-8454
+                        <a href="tel:+5511997986454" className="block hover:underline">
+                            +55 (11) 99798-6454
                         </a>
 
-                        <a href="mailto:falecom@tatitaswebsites.com.br" className="block hover:underline">
-                            falecom@tatitaswebsites.com.br
+                        <a href="mailto: Ryansantanars6@gmail.com" className="block hover:underline">
+                            Ryansantanars6@gmail.com
                         </a>
                     </div>
 
                     <div className="mt-8">
-                        <button
-                            type="submit"
-                            className="bg-amber-50 text-black px-8 py-2 rounded-3xl font-semibold hover:bg-amber-100 transition"
-                        >
-                            SOLICITAR CONTATO
-                        </button>
+
                     </div>
                 </div>
 
