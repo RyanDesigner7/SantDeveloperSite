@@ -57,7 +57,7 @@ export default function Home() {
                                 </div>
 
                                 <div className="flex justify-start ml-50">
-                                    <h2 className="text-[1.25rem] w-130 text-start  text-white">Descubra como ajudamos a desenhar e criar mais de 150 sites personalizados desde 2016.</h2>
+                                    <h2 className="text-[1.25rem] w-130 text-start  text-white">Descubra como ajudamos a desenhar e criar sites personalizados desde 2020.</h2>
                                 </div>
 
                                 <div className="mt-8 flex gap-4 justify-start ml-50">
@@ -75,7 +75,7 @@ export default function Home() {
                                         delay={0.3}
                                     >
                                         <button className="px-6 py-3 rounded-full bg-white text-black font-medium">
-                                            <a href="http://wa.me/+5511997986454">Oque Oferecemos</a>
+                                            <a href="#planos">Oque Oferecemos</a>
                                         </button>
                                     </AnimatedContent>
                                 </div>

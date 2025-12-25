@@ -40,7 +40,7 @@ export default function PricingPlans() {
 
                     <p className="text-center text-gray-300 mb-6">
                         <span className="line-through mr-2">R$1.990</span>
-                        <span className="text-2xl font-semibold text-white">R$1.760</span> à vista
+                        <span className="text-2xl font-semibold text-white">R$1.560</span> à vista
                     </p>
 
                     <ul className="space-y-3 text-sm text-gray-200 flex-1">
@@ -94,7 +94,7 @@ export default function PricingPlans() {
 
                     <p className="text-center text-gray-300 mb-6">
                         <span className="line-through mr-2">R$2.490</span>
-                        <span className="text-2xl font-semibold text-white">R$2.090</span> à vista
+                        <span className="text-2xl font-semibold text-white">R$1.890</span> à vista
                     </p>
 
                     <ul className="space-y-3 text-sm text-gray-200 flex-1">
@@ -138,7 +138,7 @@ export default function PricingPlans() {
 
                     <p className="text-center text-gray-300 mb-6">
                         <span className="line-through mr-2">R$3.490</span>
-                        <span className="text-2xl font-semibold text-white">R$3.090</span> à vista
+                        <span className="text-2xl font-semibold text-white">R$2.590</span> à vista
                     </p>
 
                     <ul className="space-y-3 text-sm text-gray-200 flex-1">
