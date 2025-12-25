@@ -2,14 +2,12 @@
 
 import LightRays from "@/components/LightRays/LightRays";
 import Image from "next/image";
-import Logomarca from "@/public/logomarca.png"
-import AnimatedContent from '@/components/Animatedcontente/animatedcontent'
+import Logomarca from "@/public/logomarca.png";
+import AnimatedContent from "@/components/Animatedcontente/animatedcontent";
 import Nav from "@/components/NavBar/navbar";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-
 
 export default function Home() {
     useEffect(() => {
@@ -19,14 +17,15 @@ export default function Home() {
             easing: "ease-in-out",
         });
     }, []);
+
     return (
         <div>
-
             {/* MAIN PRIMARY */}
-            < main className="w-full min-h-screen bg-black relative overflow-hidden" >
+            <main className="w-full min-h-screen bg-black relative overflow-hidden">
                 <Nav />
+
                 {/* Background Light Rays */}
-                < div className="absolute inset-0 z-0" >
+                <div className="absolute inset-0 z-0">
                     <LightRays
                         raysOrigin="top-center"
                         raysColor="#87cefa"
@@ -38,30 +37,29 @@ export default function Home() {
                         noiseAmount={0.1}
                         distortion={0.05}
                     />
-                </div >
+                </div>
 
                 {/* Overlay escuro para contraste */}
-                < div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/40 via-black/60 to-black" ></div >
+                <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/40 via-black/60 to-black"></div>
 
                 {/* Conteúdo */}
-                < div className="relative z-[2]" >
-
+                <div className="relative z-[2] container mx-auto px-6">
 
                     {/* Hero Content */}
-                    <section >
-                        <div className="flex justify-center items-center  mt-10">
+                    <section className="min-h-[calc(100vh-80px)] flex items-center justify-center py-10">
+                        <div className="flex flex-col md:flex-row items-center justify-between gap-12 w-full max-w-7xl">
 
-                            <div>
-                                <div className="flex justify-start ml-50">
-                                    <h1 className="text-[3.25rem] w-200 text-start mt-30  text-white">Criação de site profissional para o seu negócio</h1>
-                                </div>
+                            {/* Texto do Hero */}
+                            <div className="flex-1 text-center md:text-left order-2 md:order-1">
+                                <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] leading-tight font-bold text-white mb-6">
+                                    Criação de site profissional para o seu negócio
+                                </h1>
 
-                                <div className="flex justify-start ml-50">
-                                    <h2 className="text-[1.25rem] w-130 text-start  text-white">Descubra como ajudamos a desenhar e criar sites personalizados desde 2020.</h2>
-                                </div>
+                                <h2 className="text-lg sm:text-xl text-gray-300 max-w-xl mx-auto md:mx-0 mb-8">
+                                    Descubra como ajudamos a desenhar e criar sites personalizados desde 2020.
+                                </h2>
 
-                                <div className="mt-8 flex gap-4 justify-start ml-50">
-
+                                <div className="flex justify-center md:justify-start">
                                     <AnimatedContent
                                         distance={150}
                                         direction="horizontal"
@@ -74,32 +72,30 @@ export default function Home() {
                                         threshold={0.2}
                                         delay={0.3}
                                     >
-                                        <button className="px-6 py-3 rounded-full bg-white text-black font-medium">
-                                            <a href="#planos">Oque Oferecemos</a>
+                                        <button className="px-8 py-4 rounded-full bg-white text-black font-bold hover:bg-blue-50 transition-colors shadow-lg shadow-white/10">
+                                            <a href="#planos">O que Oferecemos</a>
                                         </button>
                                     </AnimatedContent>
                                 </div>
                             </div>
 
-                            <div className="mt-33">
-                                <Image
-                                    src={Logomarca}
-                                    alt="Logomarca"
-                                    width={500}
-                                />
+                            {/* Imagem/Logomarca */}
+                            <div className="flex-1 flex justify-center order-1 md:order-2">
+                                <div className="relative w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px]">
+                                    <Image
+                                        src={Logomarca}
+                                        alt="Logomarca"
+                                        priority
+                                        className="w-full h-auto object-contain drop-shadow-[0_0_30px_rgba(135,206,250,0.3)]"
+                                    />
+                                </div>
                             </div>
 
                         </div>
                     </section>
 
-                </div >
-            </main >
-
-        </div >
+                </div>
+            </main>
+        </div>
     );
 }
-
-
-
-
-

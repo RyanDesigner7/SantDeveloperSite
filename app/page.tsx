@@ -29,6 +29,9 @@ export default function Home() {
         <section>
           <Curiosidade />
         </section>
+        <section>
+          <FooterIA />
+        </section>
 
       </main >
     </>

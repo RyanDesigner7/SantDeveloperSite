@@ -1,12 +1,10 @@
 "use client";
 
 import Spline from "@splinetool/react-spline";
-import ColorBends from "@/components/Colorbends/colorbends"
+import ColorBends from "@/components/Colorbends/colorbends";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-
 
 export default function Home() {
     useEffect(() => {
@@ -16,102 +14,83 @@ export default function Home() {
             easing: "ease-in-out",
         });
     }, []);
+
     return (
-        <div>
-            {/* 3D OBJECT */}
+        <div className="bg-black">
+            {/* 3D OBJECT SECTION */}
+            <section className="relative min-h-screen flex justify-center items-center py-20 px-6 sm:px-10 overflow-hidden bg-[#000] text-white">
 
-            <section className="relative flex justify-center items-center p-40 overflow-hidden bg-[#000] text-white">
-                <div>
+                {/* Background Animation */}
+                <div className="absolute inset-0 z-0">
+                    <ColorBends
+                        colors={["#3f43ca", "#205d9e", "#0b4d5a"]}
+                        rotation={60}
+                        speed={0.3}
+                        scale={1.2}
+                        frequency={1}
+                        warpStrength={1.2}
+                        mouseInfluence={0.8}
+                        parallax={0.6}
+                        noise={0.08}
+                        transparent={false}
+                    />
+                </div>
 
-                    <div>
-                        <div className="absolute inset-0 z-1">
-                            <ColorBends
-                                colors={["#3f43ca", "#205d9e", "#0b4d5a"]}
-                                rotation={60}
-                                speed={0.3}
-                                scale={1.2}
-                                frequency={1}
-                                warpStrength={1.2}
-                                mouseInfluence={0.8}
-                                parallax={0.6}
-                                noise={0.08}
-                                transparent={false}
+                {/* Content Container */}
+                <div className="relative z-10 w-full max-w-7xl mx-auto">
+                    <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16">
+
+                        {/* Spline Container - No mobile ele fica em cima e menor */}
+                        <div
+                            data-aos="fade-up"
+                            className="w-full h-[300px] sm:h-[400px] lg:h-[600px] lg:flex-1 flex justify-center items-center"
+                        >
+                            <Spline
+                                className="w-full h-full"
+                                scene="https://prod.spline.design/6s9OrqeIpg1DL1SQ/scene.splinecode"
                             />
                         </div>
 
-                        <div className="flex s justify-center items-center gap-7 ">
+                        {/* Text Content */}
+                        <div
+                            data-aos="fade-left"
+                            className="w-full lg:flex-1 text-center lg:text-left"
+                        >
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                                OBJETOS EM 3D E INTERATIVO EM SUA LANDING PAGE
+                            </h1>
 
-                            <div className="flex items-center justify-center gap-7 " >
+                            <ul className="space-y-6 text-sm sm:text-base text-gray-200">
+                                <li className="bg-black/20 backdrop-blur-sm p-4 rounded-xl border border-white/5">
+                                    <strong className="text-blue-400 block mb-1">1. Maior impacto visual e diferenciação</strong>
+                                    Elementos 3D criam um efeito visual superior, reforçando a percepção de inovação e modernidade da marca.
+                                </li>
 
-                                <div className=" data-aos='fade-up-right' relative z-10 flex justify-center items-center gap-7 ">
+                                <li className="bg-black/20 backdrop-blur-sm p-4 rounded-xl border border-white/5">
+                                    <strong className="text-blue-400 block mb-1">2. Aumento do tempo de permanência</strong>
+                                    Objetos interativos estimulam a curiosidade, fazendo com que o usuário permaneça mais tempo na página — positivo para SEO.
+                                </li>
 
-                                    <Spline data-aos='ease-in-out' className=" " scene="https://prod.spline.design/6s9OrqeIpg1DL1SQ/scene.splinecode" />
-                                </div>
+                                <li className="bg-black/20 backdrop-blur-sm p-4 rounded-xl border border-white/5">
+                                    <strong className="text-blue-400 block mb-1">3. Experiência imersiva</strong>
+                                    Torna a navegação envolvente, gerando maior conexão emocional com o produto ou serviço apresentado.
+                                </li>
 
-                                <div className=" w-200 z-10 ">
+                                <li className="bg-black/20 backdrop-blur-sm p-4 rounded-xl border border-white/5">
+                                    <strong className="text-blue-400 block mb-1">4. Melhor compreensão</strong>
+                                    O 3D facilita a visualização de detalhes e funcionamento, reduzindo dúvidas antes da conversão.
+                                </li>
 
-                                    <div className="">
-                                        <h1 className="text-4xl mb-4">
-                                            OBJETOS EM 3D E INTERATIVO EM SUA LANDPAGE
-                                        </h1>
-                                        <ul>
-
-                                            <li className="mb-2">1. Maior impacto visual e diferenciação
-                                                Elementos 3D criam um efeito visual superior ao conteúdo estático tradicional. Isso diferencia sua landing page da concorrência e
-                                                reforça a percepção de inovação e modernidade da marca.
-                                            </li>
-
-                                            <li className="mb-2">2. Aumento do tempo de permanência na página
-                                                Objetos 3D interativos (rotação, movimento com mouse, animações leves) estimulam a curiosidade do usuário,
-                                                fazendo com que ele permaneça mais tempo na página — um fator positivo para SEO e engajamento.
-                                            </li>
-
-                                            <li className="mb-2">3. Experiência do usuário mais imersiva
-                                                O 3D permite que o visitante “interaja” com o conteúdo,
-                                                tornando a navegação mais envolvente. Isso gera
-                                                maior conexão emocional com o produto ou serviço
-                                                apresentado.
-                                            </li>
-
-                                            <li className="mb-2">4. Melhor compreensão do produto ou serviço
-                                                Em especial para produtos físicos ou soluções técnicas,
-                                                o 3D facilita a visualização de detalhes, proporções e
-                                                funcionamento, reduzindo dúvidas e objeções antes da
-                                                conversão.    fazendo com que ele permaneça mais tempo
-                                                na página — um fator positivo para SEO e engajamento.
-                                            </li>
-
-                                            <li className="mb-2">5. Aumento da taxa de conversão
-                                                Landing pages visualmente mais atrativas e interativas tendem a converter melhor, pois:
-                                                Geram mais confiança,
-                                                Transmitem profissionalismo,
-                                                Mantêm o usuário focado na proposta principal </li>
-                                        </ul>
-                                    </div>
-
-
-
-
-                                </div>
-
-
-
-                            </div>
-
-
+                                <li className="bg-black/20 backdrop-blur-sm p-4 rounded-xl border border-white/5">
+                                    <strong className="text-blue-400 block mb-1">5. Aumento da taxa de conversão</strong>
+                                    Páginas visualmente atrativas geram mais confiança e transmitem profissionalismo extremo.
+                                </li>
+                            </ul>
                         </div>
 
                     </div>
-
-
                 </div>
-            </section >
-
-        </div >
+            </section>
+        </div>
     );
 }
-
-
-
-
-
